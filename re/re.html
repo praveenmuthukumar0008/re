@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Enfield</title>
+    <link rel="stylesheet" href="style.css">
+   <link href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: black;
+        }
+        
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: black;
+            padding: 10px 20px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 10%;
+            box-sizing: border-box;
+            z-index: 1000;
+        }
+        
+        header img {
+            width: 150px;
+            height: auto;
+        }
+        
+        header nav ul {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        header nav ul li {
+            padding: 0 20px;
+        }
+        
+        header nav ul li a {
+            color: rgb(11, 120, 137);
+            text-decoration: none;
+            font-size: 20px;
+        }
+        
+        header nav ul li a:hover {
+            text-decoration: underline;
+        }
+        
+        .main-content {
+            background: url('https://www.royalenfield.com/content/dam/royal-enfield/india/home/apparel/desktop/royal-enfield-x-alpinestar.jpg') no-repeat center;
+            background-size: cover;
+            height: 100vh;
+        }
+        #Types{
+            height: 500px;
+        }
+        .bike-collection {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            background-color: white;
+            
+          }
+        
+          .bike {
+            background-color: black;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            transform: scale(1.1);
+          }
+          
+          .bike img {
+            max-width: 100%;
+            padding-top: 25px;
+            transition: transform 0.3s ease; 
+          }
+          
+          .bike h3 {
+            
+            font-size: 25px;
+            color: gold;
+          }
+          .bike :hover{
+            transform: scale(1.1);
+          }
+          .bike h3:hover{
+            cursor: grab;
+            color: aliceblue;
+          }   
+          .bike h2{
+            color: goldenrod;
+          }
+          #new-image h2{
+            font-size: 40px;
+            text-align: center;
+            background-color:orange;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(85, 85, 85, 0.4); 
+            padding-bottom: 20px;
+            padding-top: 4px;
+          }
+          #new-image h2:hover{
+            transform: scale(1.1);
+            transition: transform 0.3s ease; 
+            cursor: grab;
+          }
+          #About {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px;
+            margin-top: 40px;
+            
+            background: black; /* Optional light background */
+        }
+        
+        .about-container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            gap: 20px;
+        }
+        
+        .about-content {
+            flex: 1;
+            background: rgba(255, 251, 0, 0.2); /* Glass effect */
+            border-radius: 12px;
+            padding: 20px;
+            backdrop-filter: blur(10px); /* For the glass effect */
+            box-shadow: 0 4px 10px rgba(239, 237, 237, 0.2); /* Subtle shadow for depth */
+            color: #333; /* Text color */
+            max-width: 50%;
+        }
+        
+        .about-content h2 {
+            font-size: 35px;
+            margin-bottom: 15px;
+            background-color:rgb(241, 4, 4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(85, 85, 85, 0.4);
+        }
+        
+        .about-content p {
+            font-size: 25px;
+            line-height: 1.6;
+            margin-bottom: 10px;
+            text-align: justify;
+            color: rgb(10, 200, 225);
+        }
+        
+        .about-image {
+            flex: 1;
+            position: relative;
+            max-width: 40%;
+        }
+        
+        .about-image img {
+            position: absolute;
+            width: 70%;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s ease-in-out;
+        }
+        
+        .about-image .image1 {
+            top: 40px;
+            left: 270px;
+            z-index:2;
+        }
+        
+        .about-image .image2 {
+            top: 250px;
+            left: 20px;
+            z-index: 1;
+        }
+        .image1:hover{
+            transform: scale(1.1);
+            transition: transform 0.3s ease; 
+            cursor: grab;
+        }
+        .image2:hover{
+            transform: scale(1.1);
+            transition: transform 0.3s ease; 
+            cursor: grab;
+        }
+        .movingbike-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .movingbike {
+            position: absolute;
+            bottom: 10%;
+            width: 150px; /* Adjust the size of the bike */
+            animation: moveBike 5s linear infinite;
+        }
+
+        @keyframes moveBike {
+            0% {
+                transform: translateX(-150px); /* Start outside the left side of the screen */
+            }
+            100% {
+                transform: translateX(100vw); /* Move to outside the right side of the screen */
+            }
+        }
+        #press{
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+            color: aliceblue;
+
+        }
+        
+        
+        </style>
+</head>
+<body>
+    <header>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Royal_Enfield_logo.svg/2560px-Royal_Enfield_logo.svg.png" alt="Royal Enfield Logo">
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#bikes">Bikes</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+  
+    <div class="main-content"></div>
+    <section id="new-image">
+      <h2>EXPLORE OUR NEW MODELS</h2>
+  </section>
+    <section id="Types">
+        <div class="bike-collection">
+            <div class="bike">
+              <img src="https://gaadiwaadi.com/wp-content/uploads/2023/05/interceptor-650-katana-scrambler-7-677x500.jpg" alt="Bike 1">
+              <h3>INTERCEPTOR</h3>
+              <h2>$25,000</h2>
+            </div>
+            <div class="bike">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBSbNRn6i0oqCN-YXC1wgmCq5wdqoW2Coj5A&s.jpg" alt="Bike 2" height="217px">
+              <h3>HIMALAYAN 411</h3>
+              <h2>$40,000</h2>
+            </div>
+            <div class="bike">
+              <img src="https://cdn.bikedekho.com/processedimages/royal-enfield/roadstar/494X300/roadstar62f099b7bca4b.jpg" alt="Bike 3">
+              <h3>HUNTER</h3>
+              <h2>$20,000</h2>
+            </div>
+            <div class="bike">
+              <img src="https://gaadiwaadi.com/wp-content/uploads/2021/04/modified-Royal-Enfield-GT650-Thailand-1.jpg" alt="Bike 4">
+              <h3>GT 650</h3>
+              <h2>$50,000</h2><br>
+            
+            </div>
+          </div>
+    </section>
+    <section id="About">
+        <div class="about-container">
+            <div class="about-content">
+                <h2>ABOUT US</h2>
+                <p>
+                    Royal Enfield's journey began in Redditch, England, in 1901, with the creation of its first motorcycle.
+                     The brand's slogan,<mark><i> "Made like a gun, goes like a bullet"</i></mark> reflects its military roots, as the company 
+                     initially produced weapons and ammunition before transitioning to motorcycles.
+                </p>
+                <p>
+                    In the mid-20th century, Royal Enfield's popularity soared, particularly in India,
+                    where the Royal Enfield Bullet was introduced in 1949. By 1955, the Indian government ordered a large number
+                     of Bullets for its police and military forces, which led to the establishment of Enfield India. 
+                     Eventually, the brand became wholly Indian-owned in 1994 when it was acquired by Eicher Motors.
+                </p>
+               
+            
+            </div>
+            <div class="about-image">
+                <img src="https://ychef.files.bbci.co.uk/1080x608/p0bwlprk.jpeg" alt="Royal Enfield Bike" class="image1">
+                <img src="https://i.pinimg.com/736x/50/38/d3/5038d300d276b5d2e5bb0312918c4afc.jpg" alt="Royal Enfield Bike" class="image2">
+                
+            </div>
+
+        </div>
+
+    </section>
+    <section id="press">
+    
+    <a href="https://youtu.be/54mz1SlhQnY?si=za3T9QLp9Jk4QbYE" class="l">Press To Start</a> 
+ 
+</section>
+
+  </body>
+</html>
